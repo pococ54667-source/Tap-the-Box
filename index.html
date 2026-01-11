@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tap the Box — Premium Clicker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Top ad slot (paste AdSense code here later) -->
+  <div class="ad-slot ad-top">
+    <!-- Example placeholder; replace with your AdSense snippet -->
+    <div class="ad-placeholder">Ad space</div>
+  </div>
+
+  <main class="container">
+    <header class="header">
+      <div class="brand">
+        <div class="logo">TB</div>
+        <div class="titles">
+          <h1>Tap the Box</h1>
+          <p class="subtitle">30 seconds. Pure focus. Beat your best.</p>
+        </div>
+      </div>
+      <button id="soundToggle" class="btn ghost">Sound: On</button>
+    </header>
+
+    <section class="hud">
+      <div class="card stat">
+        <span class="label">Score</span>
+        <span id="score" class="value">0</span>
+      </div>
+      <div class="card stat">
+        <span class="label">Time</span>
+        <span id="time" class="value">30</span>
+      </div>
+      <div class="card stat">
+        <span class="label">Best</span>
+        <span id="best" class="value">0</span>
+      </div>
+    </section>
+
+    <section class="arena" id="arena">
+      <button id="box" class="box" aria-label="Tap target"></button>
+      <div id="overlay" class="overlay hidden">
+        <div class="modal">
+          <h2>Round Over</h2>
+          <p class="result">
+            Your score: <strong id="finalScore">0</strong>
+          </p>
+          <div class="actions">
+            <button id="playAgain" class="btn primary">Play Again</button>
+            <button id="shareBtn" class="btn">Share</button>
+            <button id="leaderboardBtn" class="btn ghost">Leaderboard (local)</button>
+          </div>
+          <div id="leaderboard" class="leaderboard hidden">
+            <h3>Local Leaderboard</h3>
+            <ol id="lbList"></ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="controls">
+      <button id="startBtn" class="btn primary">Start</button>
+      <button id="howBtn" class="btn ghost">How to play</button>
+    </section>
+
+    <section id="howPanel" class="how hidden">
+      <div class="card">
+        <h3>How to play</h3>
+        <ul class="steps">
+          <li>Tap the moving box to gain points.</li>
+          <li>You have 30 seconds—stay fast and accurate.</li>
+          <li>Beat your best score and share your record.</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Made for mobile & desktop. Smooth, premium, and fast.</p>
+    </footer>
+  </main>
+
+  <!-- Bottom ad slot (paste AdSense code here later) -->
+  <div class="ad-slot ad-bottom">
+    <div class="ad-placeholder">Ad space</div>
+  </div>
+
+  <audio id="tapSound" preload="auto">
+    <source src="data:audio/mp3;base64,//uQZAAAAAAAAAAAAAAAAAAAA" type="audio/mpeg">
+    <!-- Tiny silent stub; you can replace with a short click sound -->
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
